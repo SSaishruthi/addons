@@ -26,8 +26,7 @@ from tensorflow_addons.utils import test_utils
 @test_utils.run_all_in_graph_and_eager_modes
 class F1ScoreTest(tf.test.TestCase):
     def test_config(self):
-        f1_obj = F1Score(name='f1_score',
-                         num_classes=3)
+        f1_obj = F1Score(name='f1_score', num_classes=3)
         self.assertEqual(f1_obj.name, 'f1_score')
         self.assertEqual(f1_obj.dtype, tf.float32)
         self.assertEqual(f1_obj.num_classes, 3)
